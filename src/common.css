@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    all: unset;
+    display: revert;
+}
+
+html {
+    background-image: url("./image/sunny.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
