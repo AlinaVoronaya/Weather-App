@@ -1,0 +1,22 @@
+.search {
+    margin-bottom: 30px;
+}
+
+.textInput {
+    font-size: large;
+    border: 1px solid #3f3f3f;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+    margin: 5px auto;
+}
+
+.textInput:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 10px rgb(50, 100, 153);
+}
+
+.textInput::placeholder {
+    color: #545454;
+}
