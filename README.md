@@ -12,7 +12,9 @@
 React, JavaScript, CSS, Html, Webpack
 
 ### GitHub Pages
-https://alinavoronaya.github.io/weather-app/
+https://alinavoronaya.github.io/Weather-App/
+
+![weather](https://user-images.githubusercontent.com/87168061/196687962-c91fa4fd-5baf-4a5f-b05c-dd15d9797f23.png)
 
 ### Использование
 
