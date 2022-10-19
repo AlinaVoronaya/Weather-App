@@ -7,8 +7,20 @@ import './App.css';
 const mapWeatherConditions = (string) => {
     if (string === "Clouds") {
         return "Облачно"
+    } else if (string === "Clear") {
+        return "Ясно"
+    } else if (string === "Thunderstorm") {
+        return "Гроза"
+    } else if (string === "Drizzle") {
+        return "Морось"
+    } else if (string === "Rain") {
+        return "Дождь"
+    } else if (string === "Snow") {
+        return "Снег"
+    } else if (string === "Rain") {
+        return "Дождь"
     }
-    return "";
+        return "";
 }
 
 function App() {

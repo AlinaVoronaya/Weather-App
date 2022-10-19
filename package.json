@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://alinavoronaya.github.io/weather-app/",
+  "homepage": "https://alinavoronaya.github.io/Weather-App/",
   "eslintConfig": {
     "extends": [
       "react-app",
