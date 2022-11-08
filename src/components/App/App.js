@@ -20,7 +20,7 @@ const mapWeatherConditions = (string) => {
     } else if (string === "Rain") {
         return "Дождь"
     }
-        return "";
+    return "";
 }
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
             getWeather(position.coords.latitude,
                 position.coords.longitude)
         }, (err) => console.log(err.message));
-    },[])
+    }, [])
 
     const getWeather = (latitude, longitude) => {
         const urlLocation = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=c64a374174e692bfd1fc25bb4d1ed61c&lang=ru&units=metric`
@@ -59,17 +59,13 @@ function App() {
     return (
         <div className="app">
 
-            <div className="search">
-                <input
-                    value={location}
-                    onChange={event => setLocation(event.target.value)}
-                    onKeyDown={searchLocation}
-                    placeholder="Введите город"
-                    type="text"
-                />
-            </div>
+            <Form
+                location={location}
+                setLocation={setLocation}
+                searchLocation={searchLocation}
+            />
 
-            <div className="container">
+            <div className="app-container">
 
                 <div className="top">
                     <div className="location">
