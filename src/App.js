@@ -3,6 +3,7 @@ import axios from "axios";
 import {Info} from "./components/Info/Info";
 import {Form} from "./components/Form/Form";
 import './App.css';
+import {Footer} from "./components/Footer/Footer";
 
 const mapWeatherConditions = (string) => {
     if (string === "Clouds") {
@@ -58,48 +59,20 @@ function App() {
 
     return (
         <div className="app">
-
             <Form
                 location={location}
                 setLocation={setLocation}
                 searchLocation={searchLocation}
             />
-
             <div className="container">
-
                 <Info
                     data={data}
                     mapWeatherConditions={mapWeatherConditions}
                 />
+                <Footer
+                    data={data}
+                />
 
-                {/*<div className="top">*/}
-                {/*    <div className="location">*/}
-                {/*        <p>{data.name}</p>*/}
-                {/*    </div>*/}
-                {/*    <div className="temp">*/}
-                {/*        {data.main ? <h1>{data.main.temp.toFixed()}°</h1> : null}*/}
-                {/*    </div>*/}
-                {/*    <div className="description">*/}
-                {/*        {data.weather ? <p>{mapWeatherConditions(data.weather[0].main)}</p> : null}*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
-                {data.name !== undefined &&
-                    <div className="bottom">
-                        <div className="feels">
-                            {data.main ? <p>{data.main.feels_like.toFixed()}°</p> : null}
-                            <p>Ощущается как</p>
-                        </div>
-                        <div className="humidity">
-                            {data.main ? <p>{data.main.humidity} %</p> : null}
-                            <p>Влажность</p>
-                        </div>
-                        <div className="wind">
-                            {data.wind ? <p>{data.wind.speed.toFixed()} м/с</p> : null}
-                            <p>Скорость ветра</p>
-                        </div>
-                    </div>
-                }
             </div>
         </div>
     );
