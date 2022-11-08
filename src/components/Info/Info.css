@@ -1,4 +1,16 @@
-.city {
-    text-align: center;
-    font-size: 50px;
+.info {
+    width: 100%;
+    margin: 1rem auto;
 }
+
+.info__temp {
+    font-size: 6rem;
+}
+
+.info__description {
+    position: relative;
+    right: -90%;
+    transform-origin: 0 0;
+    transform: rotate(269deg);
+}
+

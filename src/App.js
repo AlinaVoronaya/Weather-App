@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import {Info} from "../Info/Info";
-import {Form} from "../Form/Form";
+import {Info} from "./components/Info/Info";
+import {Form} from "./components/Form/Form";
 import './App.css';
 
 const mapWeatherConditions = (string) => {
@@ -65,19 +65,24 @@ function App() {
                 searchLocation={searchLocation}
             />
 
-            <div className="app-container">
+            <div className="container">
 
-                <div className="top">
-                    <div className="location">
-                        <p>{data.name}</p>
-                    </div>
-                    <div className="temp">
-                        {data.main ? <h1>{data.main.temp.toFixed()}°</h1> : null}
-                    </div>
-                    <div className="description">
-                        {data.weather ? <p>{mapWeatherConditions(data.weather[0].main)}</p> : null}
-                    </div>
-                </div>
+                <Info
+                    data={data}
+                    mapWeatherConditions={mapWeatherConditions}
+                />
+
+                {/*<div className="top">*/}
+                {/*    <div className="location">*/}
+                {/*        <p>{data.name}</p>*/}
+                {/*    </div>*/}
+                {/*    <div className="temp">*/}
+                {/*        {data.main ? <h1>{data.main.temp.toFixed()}°</h1> : null}*/}
+                {/*    </div>*/}
+                {/*    <div className="description">*/}
+                {/*        {data.weather ? <p>{mapWeatherConditions(data.weather[0].main)}</p> : null}*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 {data.name !== undefined &&
                     <div className="bottom">
